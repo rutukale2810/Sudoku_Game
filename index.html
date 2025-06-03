@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku Master</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="sudoku-logo-poster-design-free-vector.jpg" alt="Sudoku Icon">
+    <h1>Sudoku Master</h1>
+    <p>Challenge your brain and beat the clock!</p>
+  </header>
+
+  <section id="controls">
+    <button onclick="newGame()">New Game</button>
+    <button onclick="resetGame()">Reset</button>
+    <button onclick="checkSolution()">Check Solution</button>
+    <button onclick="getHint()">Hint</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </section>
+
+  <section id="board"></section>
+
+  <section id="status">
+    <p id="message"></p>
+    <p id="timer">Time: 0s</p>
+    <p id="stats">Puzzles Solved: 0 | Fastest: --s</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

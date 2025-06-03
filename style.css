@@ -1,0 +1,110 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: background 0.5s, color 0.5s;
+}
+
+header {
+  background: #0077cc;
+  color: white;
+  padding: 20px;
+}
+
+header img {
+  width: 50px;
+  vertical-align: middle;
+  animation: floatIcon 2s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+h1 {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 2em;
+}
+
+#controls {
+  margin: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-weight: bold;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: #004d99;
+  transform: scale(1.05);
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  grid-gap: 2px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:focus {
+  outline: none;
+  background-color: #e0f7ff;
+  transform: scale(1.05);
+}
+
+.prefilled {
+  background: #d0e7ff;
+  font-weight: bold;
+  border: 1px solid #0077cc;
+}
+
+input.invalid {
+  border: 2px solid red !important;
+  background-color: #ffd6d6 !important;
+}
+
+#status {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.dark-mode {
+  background: #1c1c1c;
+  color: white;
+}
+
+.dark-mode .cell {
+  background: #2e2e2e;
+  color: white;
+}
+
+.dark-mode button {
+  background: #444;
+  color: white;
+}
+
+.dark-mode input.invalid {
+  background-color: #ffb3b3 !important;
+}
